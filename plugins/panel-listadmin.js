@@ -13,6 +13,9 @@ import '../config.js';
 const handler = async (m, { conn }) => {
   const domain = global.domain;
   const apikey = global.apikey;
+  if (!domain || domain === '-' || !/^https?:\/\//.test(domain) || !apikey || apikey === '-') {
+    return m.reply('Konfigurasi panel belum diisi.\nSet PANEL_DOMAIN dan PANEL_APPKEY di environment atau isi langsung di config.js');
+  }
 
   try {
     const response = await fetch(`${domain}/api/application/users`, {

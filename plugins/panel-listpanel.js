@@ -12,6 +12,9 @@ import '../config.js'
 
 const handler = async (m, { conn, sock, text, command }) => {
   try {
+    if (!global.domain || global.domain === '-' || !/^https?:\/\//.test(global.domain) || !global.apikey || global.apikey === '-' || !global.capikey || global.capikey === '-') {
+      return m.reply('Konfigurasi panel belum diisi.\nSet PANEL_DOMAIN, PANEL_APPKEY, dan PANEL_CLIENTKEY di environment atau isi langsung di config.js');
+    }
     let f = await fetch(`${global.domain}/api/application/servers`, {
       method: 'GET',
       headers: {

@@ -1,6 +1,6 @@
 import axios from "axios";
 import FormData from "form-data";
-import baileys from "@adiwajshing/baileys";
+import baileys from "@whiskeysockets/baileys";
 
 const ttSearch = async (query, count = 3) => {
     try {

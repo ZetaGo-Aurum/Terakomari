@@ -11,6 +11,9 @@ import fetch from 'node-fetch'
 import '../config.js' 
 
 const handler = async (m, { conn, sock, text, command }) => {
+  if (!global.domain || global.domain === '-' || !/^https?:\/\//.test(global.domain) || !global.apikey || global.apikey === '-') {
+    return m.reply('Konfigurasi panel belum diisi.\nSet PANEL_DOMAIN dan PANEL_APPKEY di environment atau isi langsung di config.js');
+  }
   const capital = (text) => {
     return text.charAt(0).toUpperCase() + text.slice(1);
   };

@@ -1,4 +1,4 @@
-import { generateWAMessageFromContent } from '@adiwajshing/baileys'
+import { generateWAMessageFromContent } from '@whiskeysockets/baileys'
 let handler = async (m, { conn, text, participants, usedPrefix, command }) => {
     let q = m.quoted ? m.quoted : m
     let c = m.quoted ? m.quoted : m.msg

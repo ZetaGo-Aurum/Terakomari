@@ -1,4 +1,4 @@
-const { getBinaryNodeChild, getBinaryNodeChildren } = (await import('@adiwajshing/baileys')).default
+const { getBinaryNodeChild, getBinaryNodeChildren } = (await import('@whiskeysockets/baileys')).default
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, text, participants, usedPrefix, command }) => {

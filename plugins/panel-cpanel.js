@@ -8,7 +8,7 @@ Note : Gpp kalian ambil plugin nya tapi jan hapus wm bg :v ;(
 */
 
 import fetch from 'node-fetch';
-import baileys from '@adiwajshing/baileys';
+import baileys from '@whiskeysockets/baileys';
 const { proto } = baileys;
 import '../config.js';
 

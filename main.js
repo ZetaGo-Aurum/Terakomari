@@ -37,7 +37,7 @@ const {
   makeInMemoryStore,
   makeCacheableSignalKeyStore,
   PHONENUMBER_MCC: MCC_BAILEYS
-} = await import('@adiwajshing/baileys')
+} = await import('@whiskeysockets/baileys')
 
 const PHONENUMBER_MCC = MCC_BAILEYS || {
   '62': 'ID', // Indonesia

@@ -8,7 +8,7 @@ import { xpRange } from '../lib/levelling.js'
 import moment from 'moment-timezone'
 import os from 'os'
 import fs from 'fs'
-const { getDevice } = (await import('@adiwajshing/baileys')).default
+const { getDevice } = (await import('@whiskeysockets/baileys')).default
 
 const defaultMenu = {
   before: `
